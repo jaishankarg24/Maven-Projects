@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-3.0.xsd" >
+
+	<!-- configuring the bean component called Employee -->
+	<bean id='student' class='com.abc.beans.Student'>
+		<property name="sname" value='sachin' />
+		<property name="sid" value='IND10' />
+		<property name="saddress" value='mumbai' />
+	</bean>
+	
+	<!-- Configuring the IOC container to invoke custom PropertyEditor 
+	<bean
+		class='org.springframework.beans.factory.config.CustomEditorConfigurer'>
+		<property name="customEditors">
+			<map>
+				 key should be the Address object,value should be the customPropertEditor Object 
+				<entry key="com.abc.beans.Address"
+					value="com.abc.custompropertyeditor.EmployeeAddressPropertyEditor" />
+			</map>
+		</property>
+	</bean>				
+	-->
+						
+</beans>
